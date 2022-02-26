@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include krabi_addons *.css
+recursive-include krabi_addons *.csv
+recursive-include krabi_addons *.html
+recursive-include krabi_addons *.ico
+recursive-include krabi_addons *.js
+recursive-include krabi_addons *.json
+recursive-include krabi_addons *.md
+recursive-include krabi_addons *.png
+recursive-include krabi_addons *.py
+recursive-include krabi_addons *.svg
+recursive-include krabi_addons *.txt
+recursive-exclude krabi_addons *.pyc
