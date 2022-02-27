@@ -6,7 +6,23 @@
 <div class="inspection-form" dir="{{ 'rtl' if frappe.lang == 'ar' }}">
     <h3 style="margin: 10px 0px 50px 0px;">{{_("Inspection Certificate")}}</h3>
     <p style="margin: 10px 0px 50px 0px; font-weight: bold;">{{is_orm.name}}</p>
-    
+    <!-- row -->
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="status">{{_("Status")}}</label>
+                {% if is_orm.docstatus == 0 %}
+                    <input id="status" type="text" class="form-control" readonly value="{{_('Draft')}}">
+                {% endif %}
+                {% if is_orm.docstatus == 1 %}
+                    <input id="status" type="text" class="form-control" readonly value="{{_('Submit')}}">
+                {% endif %}
+                {% if is_orm.docstatus == 2 %}
+                    <input id="status" type="text" class="form-control" readonly value="{{_('Cancelled')}}">
+                {% endif %}
+            </div>
+        </div>
+    </div>    
     <!-- row -->
     <div class="row">
         <div class="col-md-3">
