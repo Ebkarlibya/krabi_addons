@@ -4,7 +4,14 @@
 {% endblock %}
 
 <div class="inspection-form" dir="{{ 'rtl' if frappe.lang == 'ar' }}">
-    <h3 style="margin: 10px 0px 50px 0px;">{{_("Inspection Certificate")}}</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <h3 style="margin: 10px 0px 50px 0px;">{{_("Inspection Certificate")}}</h3>
+            <p style="margin: 10px 0px 50px 0px;">{{is_orm.name}}</p>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
     <!-- row -->
     <div class="row">
         <div class="col-md-3">
