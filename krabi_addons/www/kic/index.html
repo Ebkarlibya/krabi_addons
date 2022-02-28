@@ -28,19 +28,19 @@
         <div class="col-md-3">
             <div class="form-group">
                 <label for="bill_of_lading_no">{{_("Bill of Lading No")}}</label>
-                <input id="bill_of_lading_no" type="text" class="form-control" readonly value="{{is_orm.bill_of_lading_no}}">
+                <input id="bill_of_lading_no" type="text" class="form-control" readonly value="{{ is_orm.bill_of_lading_no if is_orm.bill_of_lading_no }}">
             </div>
         </div>
         <div class="col-md-3">
             <div class="form-group">
                 <label for="vessel_name">{{_("Vessel Name")}}</label>
-                <input id="vessel_name" type="text" class="form-control" readonly value="{{is_orm.vessel_name}}">
+                <input id="vessel_name" type="text" class="form-control" readonly value="{{ is_orm.vessel_name if is_orm.vessel_name }}">
             </div>
         </div>
         <div class="col-md-3">
             <div class="form-group">
                 <label for="gross_weight">{{_("Gross Weight")}}</label>
-                <input id="gross_weight" type="text" class="form-control" readonly value="{{is_orm.gross_weight}}">
+                <input id="gross_weight" type="text" class="form-control" readonly value="{{ is_orm.gross_weight if is_orm.gross_weight}}">
             </div>
         </div>
     </div>
@@ -49,19 +49,13 @@
         <div class="col-md-3">
             <div class="form-group">
                 <label for="port_of_loading">{{_("Port of Loading")}}</label>
-                <input id="port_of_loading" type="text" class="form-control" readonly value="{{is_orm.port_of_loading}}">
+                <input id="port_of_loading" type="text" class="form-control" readonly value="{{ is_orm.port_of_loading if is_orm.port_of_loading }}">
             </div>
         </div>
         <div class="col-md-3">
             <div class="form-group">
                 <label for="port_of_discharge">{{_("Port of Discharge")}}</label>
-                <input id="port_of_discharge" type="text" class="form-control" readonly value="{{is_orm.port_of_discharge}}">
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="form-group">
-                <label for="shipping_value">{{_("Shipping Value")}}</label>
-                <input id="shipping_value" type="text" class="form-control" readonly value="{{is_orm.shipping_value}}">
+                <input id="port_of_discharge" type="text" class="form-control" readonly value="{{ is_orm.port_of_discharge if is_orm.port_of_discharge }}">
             </div>
         </div>
     </div>
@@ -70,13 +64,13 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for="commodity">{{_("Commodity")}}</label>
-                <textarea id="commodity" type="text" class="form-control" readonly>{{is_orm.commodity}}</textarea>
+                <textarea id="commodity" type="text" class="form-control" readonly>{{ is_orm.commodity if is_orm.commodity}}</textarea>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
                 <label for="beneficiary">{{_("Beneficiary")}}</label>
-                <textarea id="beneficiary" type="text" class="form-control" readonly>{{is_orm.beneficiary}}</textarea>
+                <textarea id="beneficiary" type="text" class="form-control" readonly>{{ is_orm.beneficiary if is_orm.beneficiary}}</textarea>
             </div>
         </div>
     </div>
@@ -85,13 +79,13 @@
         <div class="col-md-4">
             <div class="form-group">
                 <label for="applicant">{{_("Applicant")}}</label>
-                <textarea id="applicant" type="text" class="form-control" readonly>{{is_orm.applicant}}</textarea>
+                <textarea id="applicant" type="text" class="form-control" readonly>{{ is_orm.applicant if is_orm.applicant}}</textarea>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
                 <label for="consignee">{{_("Consignee")}}</label>
-                <textarea id="consignee" type="text" class="form-control" readonly>{{is_orm.consignee}}</textarea>
+                <textarea id="consignee" type="text" class="form-control" readonly>{{ is_orm.consignee if is_orm.consignee}}</textarea>
             </div>    
         </div>
     </div>
@@ -99,7 +93,7 @@
         <div class="col-md-8">
             <label for="description_of_goods_1">{{_("Description of Goods")}}</label>
             <div id="description_of_goods_1" class="form-control" style="height: auto; margin-bottom: 20px;" readonly>
-                {{is_orm.description_of_goods_1}}
+                {{ is_orm.description_of_goods_1 if is_orm.description_of_goods_1}}
             </div>
         </div>
     </div>
@@ -107,7 +101,7 @@
         <div class="col-md-8">
             <label for="text_editor_21">{{_("Conclusion")}}</label>
             <div id="text_editor_21" class="form-control" style="height: auto;" readonly>
-                {{is_orm.text_editor_21}}
+                {{ is_orm.text_editor_21 if is_orm.text_editor_21}}
             </div>
         </div>
     </div>
